@@ -1,5 +1,52 @@
-$bgcolor: red;
+@use 'hero';
+@use 'header';
+@use 'variaveis';
+@use 'footer';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background-color: $bgcolor;
+    background-color: variaveis.$corDeFundo;
+}
+
+@mixin title($fontSize: 28px) {
+    @include text($fontSize);
+    
+}
+
+@mixin text ($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corDoTexto;
+}
+
+.text--big {
+    @include text(18px);
+    font-family: 'Bad Script', cursive;
+}
+
+.text {
+    @include text;
+    font-family: 'Roboto', sans-serif;
+}
+
+.text--small {
+    @include text(12px);
+    font-style: italic;
+    font-size:larger;
+}
+
+.play {
+    filter: invert(1);
+}
+
+.play-1 {
+    display: block;
+    align-items: center;
+    color: variaveis.$corTextoPrincipal;
+    margin-left: 10px;
 }

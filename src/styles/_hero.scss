@@ -1,0 +1,87 @@
+@use 'variaveis';
+
+.hero {
+    padding: 5.6vw;
+    min-height: 80vh;
+    background-image: url(../images/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    
+
+    &__content {
+        max-width: 640px;
+
+        &__brading {
+            max-width: 100%;
+            margin: 0 auto 10px;
+        }
+
+        img {
+            border-radius: 6px;
+            margin-left: 20px;
+        }
+        
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        max-width: 50em;
+        margin-top: 1.5em;
+    }
+
+    &__btn__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__btn__item__1 {
+        padding: 20px 45px;
+        background-color: variaveis.$corDaLogo;
+        color: variaveis.$corTextoSecundario;
+        margin-bottom: 2em;
+        border-bottom: 2px solid variaveis.$corDeFundo;
+        transition: all .3s;
+        text-decoration: none;
+        border-radius: 6px;
+    }
+
+    &__btn__item__1:hover {
+        background-color: variaveis.$corDoHover; 
+    }
+
+    &__btn__p {
+        margin-top: 30px;
+        color: variaveis.$corTextoSecundario;
+        font-family: 'Oswald', sans-serif;
+
+    }
+
+    &__btn__2 {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        background-color: variaveis.$corDaLogo;
+        padding: 10px 10px; 
+        margin-top: 30px;
+        width: 15%;
+        border-radius: 5px 5px 0 0;
+        border-bottom: 4px solid variaveis.$corDeFundo;
+        gap: 15px;
+        transition: all .3s;
+    }
+
+    &__btn__2:hover {
+        background-color: aquamarine;
+    }
+
+    &__btn__2 img {
+        max-width: 100%;
+        height: 50px;
+        margin-top: 10px;
+        
+    }
+
+}

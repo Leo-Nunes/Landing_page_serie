@@ -1,0 +1,35 @@
+@use 'variaveis';
+
+.footer {
+    &__cards {
+        flex-flow: row;
+        display: flex;
+        align-items: center;
+        margin-left: 23em;
+        margin-top: 1.5em;
+    }
+
+    &__cards__item {
+        height: 180px;
+        max-width: 300px;
+        box-shadow: 12px 0px 32px 2px variaveis.$corDoBox;
+        margin-left: -120px;
+        cursor: pointer;
+        transition: all 0.25s ease-in-out;
+        overflow: hidden;
+    }
+
+    &__cards__item img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__cards__item:hover {
+        transform: translateY(-16px) rotate(3deg);
+    }
+
+    &__cards__item:hover ~ &__cards__item {
+        transform: translateX(140px)
+    }
+}
