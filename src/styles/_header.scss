@@ -6,6 +6,11 @@
     justify-content: space-between;
     padding: 25px 48px;
 
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+
         img {
             mix-blend-mode: multiply;
             width: 50px;
@@ -16,6 +21,7 @@
             align-items: center;
             gap: 40px;
             list-style: none;
+
         }
 
         &__navigation__item li a {
@@ -24,6 +30,7 @@
             border-bottom: 5px solid transparent;
             transition: all .6s;
             text-decoration: none;
+
         }
 
         &__navigation__item li a:hover {
@@ -35,6 +42,7 @@
             width: 22px;
             cursor: pointer;
         }
+
 
     }
 
